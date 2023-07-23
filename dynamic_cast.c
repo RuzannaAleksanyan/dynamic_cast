@@ -47,7 +47,6 @@ int is_type_compatible(const struct TypeInfo* srcType, const struct TypeInfo* de
 }
 
 void* DynamicCast(void* ptr, const struct TypeInfo* destType) {
-    // struct Base* basePtr = (struct Base*)ptr;
     struct TypeInfo ***basePtr = (struct TypeInfo ***)ptr;
     if (**basePtr == NULL) {
         return NULL;
